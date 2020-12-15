@@ -1,0 +1,34 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+<div class = "form-froup row" style="width: 50%;">
+
+    <label class = "col-sm-2 col-form-label">Meal TYPE</label>
+    <div cass="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="MealTYPE"
+        placeholder="Enter Meal Name">
+    </div>
+
+    <label class = "col-sm-2 col-form-label">Restaurant</label>
+    <div cass="col-sm-10">
+        <select class="form-control" [(ngModel)]="Restaurant">
+        <option>--Select--</option>
+        <option *ngFor="let resID of RestaurantsList">
+            {{resID.RestaurantID}}
+        </option>
+        </select>
+    </div>
+
+    <label class = "col-sm-2 col-form-label">Meal Creation Date</label>
+    <div cass="col-sm-10">
+        <input type="date" [(ngModel)]="MealCreationDate">
+        
+    </div>
+
+</div>
+<button (click)="addMeal()" *ngIf="m.MealID==0" class="btn btn-primary">
+    Add
+</button>
+</div>
+
+<button (click)="addMeal()" *ngIf="m.MealID==0" class="btn btn-primary">
+    Add
+</button>
